@@ -1,0 +1,68 @@
+﻿@model IW7PP.ViewModel.ClienteVM
+
+@{
+    ViewData["Title"] = "Crear Cliente";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewData["Title"]</title>
+    <link href="~/css/site.css" rel="stylesheet" />
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Crear Cliente</h1>
+        <hr />
+
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form asp-action="CreateCliente">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                    <!-- Nombre -->
+                    <div class="form-group">
+                        <label asp-for="Name" class="control-label"></label>
+                        <input asp-for="Name" class="form-control" />
+                    </div>
+
+                    <!-- Apellido -->
+                    <div class="form-group">
+                        <label asp-for="LastName" class="control-label"></label>
+                        <input asp-for="LastName" class="form-control" />
+                    </div>
+
+                    <!-- Teléfono -->
+                    <div class="form-group">
+                        <label asp-for="PhoneNumber" class="control-label"></label>
+                        <input asp-for="PhoneNumber" class="form-control" />
+                    </div>
+
+                    <!-- Prótesis (Select) -->
+                    <div class="form-group">
+                        <label asp-for="ProtesisId" class="control-label"></label>
+                        <select asp-for="ProtesisId" class="form-control" asp-items="ViewBag.ProsthesisId"></select>
+                    </div>
+
+                    <!-- Nota sobre el estilo de vida -->
+                    <div class="alert alert-info" role="alert">
+                        Nota: El estilo de vida será calculado automáticamente al crear el cliente.
+                    </div>
+
+                    <input type="hidden" asp-for="LifeStyleId" />
+
+                    <div class="form-group text-center">
+                        <input type="submit" value="Crear" class="btn btn-primary" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+</body>
+</html>

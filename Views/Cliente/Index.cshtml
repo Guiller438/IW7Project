@@ -1,15 +1,15 @@
-﻿@model IEnumerable<IW7PP.Models.ProsthesisM.Prosthesis>
+﻿@model IEnumerable<IW7PP.Models.Cliente.ClientesProtesicos>
 
 @{
-    ViewData["Title"] = "Administración de prótesis creadas";
+    ViewData["Title"] = "Administración de clientes";
 }
 
-<h1 class="text-center my-4">Administración de prótesis</h1>
+<h1 class="text-center my-4">Administración de clientes</h1>
 
 <div class="container mb-5 pb-5">
     <div class="row mb-3">
         <div class="col-sm-3 offset-sm-9">
-            <a asp-action="CreateProsthesis" asp-controller="Prosthesis" class="btn btn-primary w-100">Crear Nueva prótesis</a>
+            <a asp-action="CreateCliente" asp-controller="Cliente" class="btn btn-primary w-100">Crear Nueva cliente</a>
         </div>
     </div>
     <div class="card shadow-sm">
@@ -24,16 +24,12 @@
                         <thead class="thead-light">
                             <tr>
                                 <th>Id</th>
-                                <th>Liner</th>
-                                <th>Tube</th>
-                                <th>Foot</th>
-                                <th>Union Socket</th>
-                                <th>Knee Articulate</th>
-                                <th>Upper Limb Amputations</th>
-                                <th>Lower Limb Amputations</th>
-                                <th>Durability</th>
-                                <th>Average Durability</th>
-                                <th>Acciones</th>
+                                <th>Name</th>
+                                <th>Last Name</th>
+                                <th>Phone Number</th>
+                                <th>Prosthesis Id</th>
+                                <th>LifeStyle</th>
+                                <th>Acciones</th>DeleteClient
                             </tr>
                         </thead>
                         <tbody>
@@ -41,19 +37,15 @@
                             {
                                 <tr>
                                     <td>@Html.DisplayFor(m => item.Id)</td>
-                                    <td>@Html.DisplayFor(m => item.Liner.Name)</td>
-                                    <td>@Html.DisplayFor(m => item.Tube.Name)</td>
-                                    <td>@Html.DisplayFor(m => item.Foot.Name)</td>
-                                    <td>@Html.DisplayFor(m => item.UnionSocket.Name)</td>
-                                    <td>@Html.DisplayFor(m => item.RodillaArticulada.Name)</td>
-                                    <td>@Html.DisplayFor(m => item.UpperLimbAmputations.AmputationName)</td>
-                                    <td>@Html.DisplayFor(m => item.LowerLimbAmputations.AmputationName)</td>
-                                    <td>@Html.DisplayFor(m => item.Durability)</td>
-                                    <td>@Html.DisplayFor(m => item.AverageDurability)</td>
+                                    <td>@Html.DisplayFor(m => item.Name)</td>
+                                    <td>@Html.DisplayFor(m => item.LastName)</td>
+                                    <td>@Html.DisplayFor(m => item.PhoneNumber)</td>
+                                    <td>@Html.DisplayFor(m => item.Prosthesis.Id)</td>
+                                    <td>@Html.DisplayFor(m => item.LifeStyle.Name)</td>
                                     <td>
                                         <div class="btn-group" role="group" aria-label="Acciones">
-                                            <a class="btn btn-sm btn-primary" href="@Url.Action("EditProsthesis", "Prosthesis", new { id = item.Id })">Editar</a>
-                                            <form asp-action="DeleteProsthesis" asp-route-id="@item.Id" class="d-inline-block" method="post">
+                                            <a class="btn btn-sm btn-primary" href="@Url.Action("Editar", "Prosthesis", new { id = item.Id })">Editar</a>
+                                            <form asp-action="DeleteCliente" asp-route-id="@item.Id" class="d-inline-block" method="post">
                                                 <button type="submit" onclick="return confirm('¿Está seguro de borrar este registro?')" class="btn btn-sm btn-danger">Borrar</button>
                                             </form>
                                         </div>
@@ -71,22 +63,7 @@
             <!-- Adding buttons below the table -->
             <div class="mt-4 row">
                 <div class="col">
-                    <a asp-action="FeetView" asp-controller="Prosthesis" class="btn btn-secondary w-100 mx-2">Feets</a>
-                </div>
-                <div class="col">
-                    <a asp-action="KneeArticulateView" asp-controller="Prosthesis" class="btn btn-secondary w-100 mx-2">Knees </a>
-                </div>
-                <div class="col">
-                    <a asp-action="LinerView" asp-controller="Prosthesis" class="btn btn-secondary w-100 mx-2">Liners</a>
-                </div>
-                <div class="col">
-                    <a asp-action="SocketView" asp-controller="Prosthesis" class="btn btn-secondary w-100 mx-2">Sockets</a>
-                </div>
-                <div class="col">
-                    <a asp-action="TubesView" asp-controller="Prosthesis" class="btn btn-secondary w-100 mx-2">Tubes</a>
-                </div>
-                <div class="col">
-                    <a asp-action="UnionSocketsView" asp-controller="Prosthesis" class="btn btn-secondary w-100 mx-2">Socket Unions</a>
+                    <a asp-action="LifeStyleView" asp-controller="Cliente" class="btn btn-secondary w-100 mx-2">Life styles</a>
                 </div>
             </div>
         </div>
@@ -125,4 +102,3 @@
         });
     </script>
 }
-x

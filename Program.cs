@@ -1,3 +1,4 @@
+using IW7PP.Controllers.Cliente;
 using IW7PP.Controllers.ComponentsControllers;
 using IW7PP.Data;
 using Microsoft.AspNetCore.Authentication.Cookies;
@@ -20,6 +21,9 @@ builder.Services.AddScoped<LinerController>();
 builder.Services.AddScoped<SocketController>();
 builder.Services.AddScoped<TubesController>();
 builder.Services.AddScoped<UnionSocketsController>();
+builder.Services.AddScoped<ClienteController>();
+builder.Services.AddScoped<LifeStyleController>();
+
 
 
 
