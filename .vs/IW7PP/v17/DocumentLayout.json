@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\guill\\Desktop\\IW7\\IW7PP\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4A15FDA1-9711-44F1-BDAC-54B0ED133F54}|IW7PP.csproj|c:\\users\\guill\\desktop\\iw7\\iw7pp\\views\\cliente\\createcliente.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4A15FDA1-9711-44F1-BDAC-54B0ED133F54}|IW7PP.csproj|solutionrelative:views\\cliente\\createcliente.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4A15FDA1-9711-44F1-BDAC-54B0ED133F54}|IW7PP.csproj|c:\\users\\guill\\desktop\\iw7\\iw7pp\\controllers\\cliente\\clientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4A15FDA1-9711-44F1-BDAC-54B0ED133F54}|IW7PP.csproj|solutionrelative:controllers\\cliente\\clientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4A15FDA1-9711-44F1-BDAC-54B0ED133F54}|IW7PP.csproj|c:\\users\\guill\\desktop\\iw7\\iw7pp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4A15FDA1-9711-44F1-BDAC-54B0ED133F54}|IW7PP.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A15FDA1-9711-44F1-BDAC-54B0ED133F54}|IW7PP.csproj|c:\\users\\guill\\desktop\\iw7\\iw7pp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{4A15FDA1-9711-44F1-BDAC-54B0ED133F54}|IW7PP.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\guill\\Desktop\\IW7\\IW7PP\\Migrations\\20240610025524_ModificateColumnProtesisIdtoAllowNulls.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20240610025524_ModificateColumnProtesisIdtoAllowNulls.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,42 +22,42 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CreateCliente.cshtml",
-              "DocumentMoniker": "C:\\Users\\guill\\Desktop\\IW7\\IW7PP\\Views\\Cliente\\CreateCliente.cshtml",
-              "RelativeDocumentMoniker": "Views\\Cliente\\CreateCliente.cshtml",
-              "ToolTip": "C:\\Users\\guill\\Desktop\\IW7\\IW7PP\\Views\\Cliente\\CreateCliente.cshtml",
-              "RelativeToolTip": "Views\\Cliente\\CreateCliente.cshtml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-09T19:17:40.59Z",
+              "DocumentIndex": 2,
+              "Title": "20240610025524_ModificateColumnProtesisIdtoAllowNulls.cs",
+              "DocumentMoniker": "C:\\Users\\guill\\Desktop\\IW7\\IW7PP\\Migrations\\20240610025524_ModificateColumnProtesisIdtoAllowNulls.cs",
+              "RelativeDocumentMoniker": "Migrations\\20240610025524_ModificateColumnProtesisIdtoAllowNulls.cs",
+              "ToolTip": "C:\\Users\\guill\\Desktop\\IW7\\IW7PP\\Migrations\\20240610025524_ModificateColumnProtesisIdtoAllowNulls.cs",
+              "RelativeToolTip": "Migrations\\20240610025524_ModificateColumnProtesisIdtoAllowNulls.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-10T02:55:24.343Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ClienteController.cs",
-              "DocumentMoniker": "C:\\Users\\guill\\Desktop\\IW7\\IW7PP\\Controllers\\Cliente\\ClienteController.cs",
-              "RelativeDocumentMoniker": "Controllers\\Cliente\\ClienteController.cs",
-              "ToolTip": "C:\\Users\\guill\\Desktop\\IW7\\IW7PP\\Controllers\\Cliente\\ClienteController.cs",
-              "RelativeToolTip": "Controllers\\Cliente\\ClienteController.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-09T19:16:07.32Z",
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\guill\\Desktop\\IW7\\IW7PP\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\guill\\Desktop\\IW7\\IW7PP\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-06-10T02:54:49.472Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\guill\\Desktop\\IW7\\IW7PP\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\guill\\Desktop\\IW7\\IW7PP\\Program.cs",
               "RelativeToolTip": "Program.cs",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-07T19:41:18.734Z",
+              "WhenOpened": "2024-06-10T02:54:44.457Z",
               "EditorCaption": ""
             }
           ]

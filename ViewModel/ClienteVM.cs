@@ -28,7 +28,7 @@ namespace IW7PP.ViewModel
         public string PhoneNumber { get; set; }
 
         // Conexion con protesis
-        public int ProtesisId { get; set; }
+        public int? ProtesisId { get; set; }
 
         // Conexion con estilo de vida
         public int LifeStyleId { get; set; }

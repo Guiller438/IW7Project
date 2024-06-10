@@ -40,8 +40,6 @@ namespace IW7PP.Data
         public DbSet<ClientesProtesicos> ClientesProtesicos { get; set; }
 
 
-
-
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);

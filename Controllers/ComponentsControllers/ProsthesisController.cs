@@ -1,4 +1,5 @@
 ﻿using IW7PP.Data;
+using IW7PP.Models.Cliente;
 using IW7PP.Models.ProsthesisM;
 using IW7PP.ViewModel;
 using Microsoft.AspNetCore.Mvc;
@@ -26,6 +27,7 @@ namespace IW7PP.Controllers.ComponentsControllers
         UnionSocketsController _unionSocketsController;
 
 
+
         public ProsthesisController(ApplicationDbContext context, FeetController feetController, KneeArticulateController kneeArticulateController, LinerController linerController, SocketController socketController, TubesController tubesController, UnionSocketsController unionSocketsController)
         {
             _context = context;
@@ -35,6 +37,7 @@ namespace IW7PP.Controllers.ComponentsControllers
             _socketController = socketController;
             _tubesController = tubesController;
             _unionSocketsController = unionSocketsController;
+
 
         }
 
@@ -165,90 +168,6 @@ namespace IW7PP.Controllers.ComponentsControllers
 
         }
 
-        private double CalculateDurability(Prosthesis prosthesis)
-        {
-            double totalDurability = 0;
-
-            // Verifica cada componente y añade su durabilidad si existe
-            totalDurability += _context.Sockets
-                .Where(s => s.Id == prosthesis.SocketId)
-                .Select(s => (double?)s.Durability)
-                .FirstOrDefault() ?? 0;
-
-            totalDurability += _context.Liners
-                .Where(l => l.Id == prosthesis.LinerId)
-                .Select(l => (double?)l.Durability)
-                .FirstOrDefault() ?? 0;
-
-            totalDurability += _context.Tubes
-                .Where(t => t.Id == prosthesis.TubeId)
-                .Select(t => (double?)t.Durability)
-                .FirstOrDefault() ?? 0;
-
-            totalDurability += _context.Feet
-                .Where(f => f.Id == prosthesis.FootId)
-                .Select(f => (double?)f.Durability)
-                .FirstOrDefault() ?? 0;
-
-            totalDurability += _context.UnionSockets
-                .Where(u => u.Id == prosthesis.UnionSocketId)
-                .Select(u => (double?)u.Durability)
-                .FirstOrDefault() ?? 0;
-
-            totalDurability += _context.KneeArticulates
-                .Where(k => k.Id == prosthesis.KneeArticulateId)
-                .Select(k => (double?)k.Durability)
-                .FirstOrDefault() ?? 0;
-
-            return totalDurability;
-        }
-
-        private double CalculateAverageDurability(Prosthesis prosthesis)
-        {
-            var componentCount = 0;
-            double totalDurability = 0;
-
-            void AddDurability(double? durability)
-            {
-                if (durability.HasValue)
-                {
-                    totalDurability += durability.Value;
-                    componentCount++;
-                }
-            }
-
-            AddDurability(_context.Sockets
-                .Where(s => s.Id == prosthesis.SocketId)
-                .Select(s => (double?)s.Durability)
-                .FirstOrDefault());
-
-            AddDurability(_context.Liners
-                .Where(l => l.Id == prosthesis.LinerId)
-                .Select(l => (double?)l.Durability)
-                .FirstOrDefault());
-
-            AddDurability(_context.Tubes
-                .Where(t => t.Id == prosthesis.TubeId)
-                .Select(t => (double?)t.Durability)
-                .FirstOrDefault());
-
-            AddDurability(_context.Feet
-                .Where(f => f.Id == prosthesis.FootId)
-                .Select(f => (double?)f.Durability)
-                .FirstOrDefault());
-
-            AddDurability(_context.UnionSockets
-                .Where(u => u.Id == prosthesis.UnionSocketId)
-                .Select(u => (double?)u.Durability)
-                .FirstOrDefault());
-
-            AddDurability(_context.KneeArticulates
-                .Where(k => k.Id == prosthesis.KneeArticulateId)
-                .Select(k => (double?)k.Durability)
-                .FirstOrDefault());
-
-            return componentCount > 0 ? totalDurability / componentCount : 0;
-        }
 
         [HttpGet]
         public async Task<IActionResult> EditProsthesis(int id)
@@ -431,6 +350,92 @@ namespace IW7PP.Controllers.ComponentsControllers
             });
         }
 
+
+
+        public double CalculateDurability(Prosthesis prosthesis)
+        {
+            double totalDurability = 0;
+
+            // Verifica cada componente y añade su durabilidad si existe
+            totalDurability += _context.Sockets
+                .Where(s => s.Id == prosthesis.SocketId)
+                .Select(s => (double?)s.Durability)
+                .FirstOrDefault() ?? 0;
+
+            totalDurability += _context.Liners
+                .Where(l => l.Id == prosthesis.LinerId)
+                .Select(l => (double?)l.Durability)
+                .FirstOrDefault() ?? 0;
+
+            totalDurability += _context.Tubes
+                .Where(t => t.Id == prosthesis.TubeId)
+                .Select(t => (double?)t.Durability)
+                .FirstOrDefault() ?? 0;
+
+            totalDurability += _context.Feet
+                .Where(f => f.Id == prosthesis.FootId)
+                .Select(f => (double?)f.Durability)
+                .FirstOrDefault() ?? 0;
+
+            totalDurability += _context.UnionSockets
+                .Where(u => u.Id == prosthesis.UnionSocketId)
+                .Select(u => (double?)u.Durability)
+                .FirstOrDefault() ?? 0;
+
+            totalDurability += _context.KneeArticulates
+                .Where(k => k.Id == prosthesis.KneeArticulateId)
+                .Select(k => (double?)k.Durability)
+                .FirstOrDefault() ?? 0;
+
+            return totalDurability;
+        }
+
+        public double CalculateAverageDurability(Prosthesis prosthesis)
+        {
+            var componentCount = 0;
+            double totalDurability = 0;
+
+            void AddDurability(double? durability)
+            {
+                if (durability.HasValue)
+                {
+                    totalDurability += durability.Value;
+                    componentCount++;
+                }
+            }
+
+            AddDurability(_context.Sockets
+                .Where(s => s.Id == prosthesis.SocketId)
+                .Select(s => (double?)s.Durability)
+                .FirstOrDefault());
+
+            AddDurability(_context.Liners
+                .Where(l => l.Id == prosthesis.LinerId)
+                .Select(l => (double?)l.Durability)
+                .FirstOrDefault());
+
+            AddDurability(_context.Tubes
+                .Where(t => t.Id == prosthesis.TubeId)
+                .Select(t => (double?)t.Durability)
+                .FirstOrDefault());
+
+            AddDurability(_context.Feet
+                .Where(f => f.Id == prosthesis.FootId)
+                .Select(f => (double?)f.Durability)
+                .FirstOrDefault());
+
+            AddDurability(_context.UnionSockets
+                .Where(u => u.Id == prosthesis.UnionSocketId)
+                .Select(u => (double?)u.Durability)
+                .FirstOrDefault());
+
+            AddDurability(_context.KneeArticulates
+                .Where(k => k.Id == prosthesis.KneeArticulateId)
+                .Select(k => (double?)k.Durability)
+                .FirstOrDefault());
+
+            return componentCount > 0 ? totalDurability / componentCount : 0;
+        }
 
 
 

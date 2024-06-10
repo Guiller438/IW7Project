@@ -2,6 +2,7 @@
 
 @{
     ViewData["Title"] = "Crear Cliente";
+    bool fromSelectAmputationType = ViewBag.FromSelectAmputationType ?? false;
 }
 
 <!DOCTYPE html>
@@ -40,11 +41,14 @@
                         <input asp-for="PhoneNumber" class="form-control" />
                     </div>
 
-                    <!-- Prótesis (Select) -->
-                    <div class="form-group">
-                        <label asp-for="ProtesisId" class="control-label"></label>
-                        <select asp-for="ProtesisId" class="form-control" asp-items="ViewBag.ProsthesisId"></select>
-                    </div>
+                    @if (!fromSelectAmputationType)
+                    {
+                        <!-- Prótesis (Select) -->
+                        <div class="form-group">
+                            <label asp-for="ProtesisId" class="control-label"></label>
+                            <select asp-for="ProtesisId" class="form-control" asp-items="ViewBag.ProsthesisId"></select>
+                        </div>
+                    }
 
                     <!-- Nota sobre el estilo de vida -->
                     <div class="alert alert-info" role="alert">

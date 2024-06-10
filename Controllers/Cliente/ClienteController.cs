@@ -1,4 +1,5 @@
 ﻿using IW7PP.Data;
+using IW7PP.Models.Amputations;
 using IW7PP.Models.Cliente;
 using IW7PP.ViewModel;
 using Microsoft.AspNetCore.Mvc;
@@ -48,6 +49,8 @@ namespace IW7PP.Controllers.Cliente
                 LifeStyleId = TempData["LifeStyleId"] != null ? (int)TempData["LifeStyleId"] : 0
             };
 
+            ViewBag.FromSelectAmputationType = TempData["FromSelectAmputationType"] != null;
+
             ViewData["ProsthesisId"] = new SelectList(_context.Prostheses, "Id", "Id");
             ViewData["LifeStyleId"] = new SelectList(_context.LifeStyles, "Id", "Description");
 
@@ -64,12 +67,17 @@ namespace IW7PP.Controllers.Cliente
             {
                 // Verificar si ya existe un cliente con el mismo ProtesisId
                 bool exists = _context.ClientesProtesicos.Any(c => c.ProtesisId == cliente.ProtesisId);
-                if (exists)
+                if (exists && TempData["FromSelectAmputationType"] != null)
                 {
                     ModelState.AddModelError("ProtesisId", "Ya existe un cliente con esta prótesis.");
                     ViewData["ProsthesisId"] = new SelectList(_context.Prostheses, "Id", "Id");
                     ViewData["LifeStyleId"] = new SelectList(_context.LifeStyles, "Id", "Description");
                     return View(cliente);
+                }
+
+                if (TempData["FromSelectAmputationType"] != null)
+                {
+                    cliente.ProtesisId = null;
                 }
 
                 var clienteNuevo = new ClientesProtesicos
@@ -83,7 +91,30 @@ namespace IW7PP.Controllers.Cliente
 
                 _context.ClientesProtesicos.Add(clienteNuevo);
                 await _context.SaveChangesAsync();
+
+                if (clienteNuevo.ProtesisId == null && TempData["FromSelectAmputationType"] == null)
+                {
+                    Guid? amputationId = null;
+
+                    if (TempData.ContainsKey("UpperLimbAmputationId") && TempData["UpperLimbAmputationId"] is Guid upperLimbId)
+                    {
+                        amputationId = upperLimbId;
+                    }
+                    else if (TempData.ContainsKey("LowerLimbAmputationId") && TempData["LowerLimbAmputationId"] is Guid lowerLimbId)
+                    {
+                        amputationId = lowerLimbId;
+                    }
+
+                    if (amputationId.HasValue)
+                    {
+                        return RedirectToAction("GenerateUpperProsthesis", "Protesista", new { amputationId = amputationId.Value, clienteId = clienteNuevo.Id });
+                    }
+                }
+
+
                 return RedirectToAction("Index", "Cliente");
+
+
             }
             else
             {

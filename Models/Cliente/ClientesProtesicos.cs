@@ -28,7 +28,7 @@ namespace IW7PP.Models.Cliente
 
         // Conexion con protesis
         [ForeignKey("Prosthesis")]
-        public int ProtesisId { get; set; }
+        public int? ProtesisId { get; set; }
 
         // Conexion con estilo de vida
         [ForeignKey("LifeStyle")]

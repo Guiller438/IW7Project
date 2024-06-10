@@ -1,5 +1,6 @@
 ﻿using IW7PP.Data;
 using IW7PP.Models.Amputations;
+using IW7PP.Models.Cliente;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -126,7 +127,7 @@ namespace IW7PP.Controllers
         {
             if (ModelState.IsValid)
             {
-                _context.Add(alp);
+                _context.LowerLimbAmputations.Add(alp);
                 await _context.SaveChangesAsync();
                 return RedirectToAction("LowerLimbAmputations", "Amputations");
             }
@@ -167,6 +168,23 @@ namespace IW7PP.Controllers
             return RedirectToAction("LowerLimbAmputations", "Amputations");
 
         }
+
+        //Select a Amputation
+
+        //[HttpPost]
+        //public IActionResult AmputationType(bool isUpperLimb)
+        //{
+        //    IEnumerable<AmputationBase> amputations;
+        //    if (isUpperLimb)
+        //    {
+        //        amputations = _context.UpperLimbAmputations.ToList();
+        //    }
+        //    else
+        //    {
+        //        amputations = _context.LowerLimbAmputations.ToList();
+        //    }
+        //    return PartialView("_AmputationListPartial", amputations);
+        //}
 
     }
 }

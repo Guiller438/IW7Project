@@ -76,7 +76,7 @@ namespace IW7PP.Controllers
 
                     if (resultado.Succeeded)
                     {
-                        await _userManager.AddToRoleAsync(usuario, "Cliente");
+                        await _userManager.AddToRoleAsync(usuario, "Administrador");
 
                         await _signInManager.SignInAsync(usuario, isPersistent: false);
                         return RedirectToAction("Index", "Home");
