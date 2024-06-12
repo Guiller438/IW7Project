@@ -1,7 +1,7 @@
 ﻿@model IW7PP.ViewModel.ProsthesisVM
 
 @{
-    ViewData["Title"] = "Generar Prótesis Superior";
+    ViewData["Title"] = "Generate Lower Prosthesis";
 }
 
 <h2>@ViewData["Title"]</h2>
@@ -22,8 +22,7 @@
     <div class="form-group">
         <label>Amputation Name</label>
         <input type="text" class="form-control" value="@ViewBag.AmputationName" readonly />
-        <input type="hidden" asp-for="UpperLimbAmputationsiD" />
-        <input type="hidden" name="ClienteId" value="@ViewBag.ClienteId" />
+        <input type="hidden" asp-for="LowerLimbAmputationsiD" />
     </div>
     <div class="form-group">
         <label>Socket</label>

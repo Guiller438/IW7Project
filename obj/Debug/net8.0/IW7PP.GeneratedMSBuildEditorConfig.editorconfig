@@ -54,12 +54,24 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW1wdXRhdGlvbnNcTG93ZXJMaW1iQW1wdXRhdGlvbnMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/guill/Desktop/IW7/IW7PP/Views/Areas/AdminView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJlYXNcQWRtaW5WaWV3LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/guill/Desktop/IW7/IW7PP/Views/Areas/ProtesistaView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJlYXNcUHJvdGVzaXN0YVZpZXcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/guill/Desktop/IW7/IW7PP/Views/Cliente/AssignLifeStyle.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxBc3NpZ25MaWZlU3R5bGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/guill/Desktop/IW7/IW7PP/Views/Cliente/CreateCliente.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxDcmVhdGVDbGllbnRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/guill/Desktop/IW7/IW7PP/Views/Cliente/EditarCliente.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxFZGl0YXJDbGllbnRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/guill/Desktop/IW7/IW7PP/Views/Cliente/Index.cshtml]
@@ -140,6 +152,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/guill/Desktop/IW7/IW7PP/Views/Protesista/CreateProtesisManual.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvdGVzaXN0YVxDcmVhdGVQcm90ZXNpc01hbnVhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/guill/Desktop/IW7/IW7PP/Views/Protesista/GenerateLowerProsthesis.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvdGVzaXN0YVxHZW5lcmF0ZUxvd2VyUHJvc3RoZXNpcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/guill/Desktop/IW7/IW7PP/Views/Protesista/GenerateUpperProsthesis.cshtml]

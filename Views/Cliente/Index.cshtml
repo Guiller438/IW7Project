@@ -44,7 +44,7 @@
                                     <td>@Html.DisplayFor(m => item.LifeStyle.Name)</td>
                                     <td>
                                         <div class="btn-group" role="group" aria-label="Acciones">
-                                            <a class="btn btn-sm btn-primary" href="@Url.Action("Editar", "Prosthesis", new { id = item.Id })">Editar</a>
+                                            <a class="btn btn-sm btn-primary" href="@Url.Action("EditarCliente", "Cliente", new { id = item.Id })">Editar</a>
                                             <form asp-action="DeleteCliente" asp-route-id="@item.Id" class="d-inline-block" method="post">
                                                 <button type="submit" onclick="return confirm('¿Está seguro de borrar este registro?')" class="btn btn-sm btn-danger">Borrar</button>
                                             </form>

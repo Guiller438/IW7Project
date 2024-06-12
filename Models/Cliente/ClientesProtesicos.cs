@@ -11,13 +11,11 @@ namespace IW7PP.Models.Cliente
 
         [Required]
         [MaxLength(100)]
-        [MinLength(5)]
         [RegularExpression(@"^[a-zA-Z0-9\s]*$")]
         public string Name { get; set; }
 
         [Required]
         [MaxLength(100)]
-        [MinLength(5)]
         [RegularExpression(@"^[a-zA-Z0-9\s]*$")]
         public string LastName { get; set; }
 

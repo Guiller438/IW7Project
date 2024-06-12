@@ -24,6 +24,7 @@
                         <thead class="thead-light">
                             <tr>
                                 <th>Id</th>
+                                <th>Socket</th>
                                 <th>Liner</th>
                                 <th>Tube</th>
                                 <th>Foot</th>
@@ -41,6 +42,7 @@
                             {
                                 <tr>
                                     <td>@Html.DisplayFor(m => item.Id)</td>
+                                    <td>@Html.DisplayFor(m => item.Socket.Description)</td>
                                     <td>@Html.DisplayFor(m => item.Liner.Name)</td>
                                     <td>@Html.DisplayFor(m => item.Tube.Name)</td>
                                     <td>@Html.DisplayFor(m => item.Foot.Name)</td>

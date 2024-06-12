@@ -1,7 +1,7 @@
 ﻿@model IW7PP.ViewModel.ClienteVM
 
 @{
-    ViewData["Title"] = "Crear Cliente";
+    ViewData["Title"] = "Editar Cliente";
     bool fromSelectAmputationType = ViewBag.FromSelectAmputationType ?? false;
 }
 
@@ -37,12 +37,14 @@
     </div>
 
     <div class="container" id="mainContent">
-        <h1 class="text-center">Crear Cliente</h1>
+        <h1 class="text-center">Editar Cliente</h1>
         <hr />
 
         <div class="row justify-content-center">
             <div class="col-md-6">
-                <form asp-action="CreateCliente" id="createClienteForm">
+                <form asp-action="EditarCliente" id="editClienteForm" method="post">
+                    <input type="hidden" asp-for="Id" />
+
                     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
                     <!-- Nombre -->
@@ -71,21 +73,16 @@
                             <select asp-for="ProtesisId" class="form-control" asp-items="ViewBag.ProsthesisId"></select>
                         </div>
                     }
-                    else
-                    {
-                        <!-- Campo oculto para el ID del cliente -->
-                        <input type="hidden" asp-for="Id" />
-                    }
 
                     <!-- Nota sobre el estilo de vida -->
                     <div class="alert alert-info" role="alert">
-                        Nota: El estilo de vida será calculado automáticamente al crear el cliente.
+                        Nota: El estilo de vida será recalculado automáticamente al editar el cliente.
                     </div>
 
                     <input type="hidden" asp-for="LifeStyleId" />
 
                     <div class="form-group text-center">
-                        <input type="submit" value="Crear" class="btn btn-primary" />
+                        <input type="submit" value="Guardar Cambios" class="btn btn-primary" />
                     </div>
                 </form>
             </div>
@@ -110,7 +107,7 @@
             }
 
             // Mostrar pantalla de carga al enviar el formulario
-            $("#createClienteForm").on("submit", function () {
+            $("#editClienteForm").on("submit", function () {
                 $("#loadingScreen").show();
                 $("#mainContent").hide();
             });
