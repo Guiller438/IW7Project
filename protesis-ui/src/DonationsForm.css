@@ -1,0 +1,83 @@
+.form-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+}
+
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.progress-bar-container {
+  margin-top: 20px;
+}
+
+.progress-bar {
+  width: 100%;
+  background-color: #f3f3f3;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress {
+  height: 20px;
+  background-color: #4caf50;
+  text-align: center;
+  line-height: 20px;
+  color: white;
+}
+
+.progress-info {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  top: 0;
+  padding: 0 5px;
+  color: black;
+}
+
+.message {
+  margin-top: 20px;
+  text-align: center;
+  font-weight: bold;
+  color: green;
+}
