@@ -2,7 +2,10 @@
 using IW7PP.Models.Amputations;
 using IW7PP.Models.Cliente;
 using IW7PP.ViewModel;
+<<<<<<< HEAD
 using Microsoft.AspNetCore.Authorization;
+=======
+>>>>>>> dd4246d5aaf16d5e50bee8b9cc5513e6243ce7c4
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -10,7 +13,10 @@ using Microsoft.EntityFrameworkCore;
 
 namespace IW7PP.Controllers.Cliente
 {
+<<<<<<< HEAD
     [Authorize(Roles = "Administrador, Protesista")]
+=======
+>>>>>>> dd4246d5aaf16d5e50bee8b9cc5513e6243ce7c4
     public class ClienteController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -281,6 +287,7 @@ namespace IW7PP.Controllers.Cliente
             return View(cliente);
         }
 
+<<<<<<< HEAD
         //[HttpPost]
         //public async Task<IActionResult> SetDonationGoals()
         //{
@@ -303,6 +310,11 @@ namespace IW7PP.Controllers.Cliente
         //    await _context.SaveChangesAsync();
         //    return Ok(new { message = "Metas de donaciones actualizadas correctamente." });
         //}
+=======
+
+
+
+>>>>>>> dd4246d5aaf16d5e50bee8b9cc5513e6243ce7c4
 
     }
 }

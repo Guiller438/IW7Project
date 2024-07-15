@@ -39,9 +39,12 @@ namespace IW7PP.Data
         public DbSet<LifeStyle> LifeStyles { get; set; }
 
         public DbSet<ClientesProtesicos> ClientesProtesicos { get; set; }
+<<<<<<< HEAD
 
         public DbSet<DonationRequests> Donaciones { get; set; }
 
+=======
+>>>>>>> dd4246d5aaf16d5e50bee8b9cc5513e6243ce7c4
 
 
         protected override void OnModelCreating(ModelBuilder builder)

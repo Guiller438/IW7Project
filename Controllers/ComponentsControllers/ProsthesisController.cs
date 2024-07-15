@@ -445,6 +445,7 @@ namespace IW7PP.Controllers.ComponentsControllers
             var prostheses = await _context.Prostheses.ToListAsync();
             Random rnd = new Random();
 
+<<<<<<< HEAD
             foreach (var prosthesis in prostheses)
             {
                 // Genera una fecha aleatoria entre una fecha de inicio y hoy
@@ -459,6 +460,8 @@ namespace IW7PP.Controllers.ComponentsControllers
             return RedirectToAction(nameof(UpdateProsthesisDates));
         }
 
+=======
+>>>>>>> dd4246d5aaf16d5e50bee8b9cc5513e6243ce7c4
     }
 
  

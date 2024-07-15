@@ -157,5 +157,26 @@ namespace IW7PP.Controllers
             TempData["Success"] = "Amputación de miembro inferior actualizada exitosamente.";
             return RedirectToAction(nameof(LowerLimbAmputations));
         }
+<<<<<<< HEAD
+=======
+
+        //Select a Amputation
+
+        //[HttpPost]
+        //public IActionResult AmputationType(bool isUpperLimb)
+        //{
+        //    IEnumerable<AmputationBase> amputations;
+        //    if (isUpperLimb)
+        //    {
+        //        amputations = _context.UpperLimbAmputations.ToList();
+        //    }
+        //    else
+        //    {
+        //        amputations = _context.LowerLimbAmputations.ToList();
+        //    }
+        //    return PartialView("_AmputationListPartial", amputations);
+        //}
+
+>>>>>>> dd4246d5aaf16d5e50bee8b9cc5513e6243ce7c4
     }
 }

@@ -106,7 +106,11 @@ namespace IW7PP.Controllers.Cliente
             if(score >= 0 && score <= 50) 
             {
 
+<<<<<<< HEAD
                 return finaLifeStyle.FirstOrDefault(s => s.Name == "Sedentario").Id;
+=======
+                return finaLifeStyle.FirstOrDefault(s => s.Name == "Sedentary").Id;
+>>>>>>> dd4246d5aaf16d5e50bee8b9cc5513e6243ce7c4
 
             }
             else if (score >= 50 && score <= 90) 

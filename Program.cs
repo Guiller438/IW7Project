@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 using IW7PP.Controllers;
+=======
+>>>>>>> dd4246d5aaf16d5e50bee8b9cc5513e6243ce7c4
 using IW7PP.Controllers.Cliente;
 using IW7PP.Controllers.ComponentsControllers;
 using IW7PP.Controllers.Donations;
@@ -26,7 +29,11 @@ builder.Services.AddScoped<TubesController>();
 builder.Services.AddScoped<UnionSocketsController>();
 builder.Services.AddScoped<ClienteController>();
 builder.Services.AddScoped<LifeStyleController>();
+<<<<<<< HEAD
 builder.Services.AddScoped<DonationsController>();
+=======
+
+>>>>>>> dd4246d5aaf16d5e50bee8b9cc5513e6243ce7c4
 
 // Configuración de la base de datos
 builder.Services.AddDbContext<ApplicationDbContext>(options =>

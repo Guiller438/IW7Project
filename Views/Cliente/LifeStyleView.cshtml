@@ -46,7 +46,11 @@
                                     <td>
                                         <div class="btn-group" role="group" aria-label="Acciones">
                                             <a class="btn btn-sm btn-primary" asp-controller="LifeStyle" asp-action="EditStyle" asp-route-id="@item.Id">Editar</a>
+<<<<<<< HEAD
                                             <form asp-controller="LifeStyle" asp-action="DeleteStyle" asp-route-id="@item.Id" class="d-inline-block" method="post">
+=======
+                                            <form asp-action="DeleteStyle" asp-route-id="@item.Id" class="d-inline-block" method="post">
+>>>>>>> dd4246d5aaf16d5e50bee8b9cc5513e6243ce7c4
                                                 <button type="submit" onclick="return confirm('¿Está seguro de borrar este registro?')" class="btn btn-sm btn-danger">Borrar</button>
                                             </form>
                                         </div>

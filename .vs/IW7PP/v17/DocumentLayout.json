@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\guill\\Desktop\\IW7\\IW7PPConReact\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{4A15FDA1-9711-44F1-BDAC-54B0ED133F54}|IW7PP.csproj|c:\\users\\guill\\desktop\\iw7\\iw7ppconreact\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A15FDA1-9711-44F1-BDAC-54B0ED133F54}|IW7PP.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{4A15FDA1-9711-44F1-BDAC-54B0ED133F54}|IW7PP.csproj|c:\\users\\guill\\desktop\\iw7\\iw7ppconreact\\controllers\\donations\\donationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4A15FDA1-9711-44F1-BDAC-54B0ED133F54}|IW7PP.csproj|solutionrelative:controllers\\donations\\donationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4A15FDA1-9711-44F1-BDAC-54B0ED133F54}|IW7PP.csproj|c:\\users\\guill\\desktop\\iw7\\iw7ppconreact\\views\\panel\\admin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{4A15FDA1-9711-44F1-BDAC-54B0ED133F54}|IW7PP.csproj|solutionrelative:views\\panel\\admin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4A15FDA1-9711-44F1-BDAC-54B0ED133F54}|IW7PP.csproj|c:\\users\\guill\\desktop\\iw7\\iw7ppconreact\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4A15FDA1-9711-44F1-BDAC-54B0ED133F54}|IW7PP.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4A15FDA1-9711-44F1-BDAC-54B0ED133F54}|IW7PP.csproj|c:\\users\\guill\\desktop\\iw7\\iw7ppconreact\\models\\donations\\donationrequests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -30,23 +30,22 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Admin.cshtml",
               "DocumentMoniker": "C:\\Users\\guill\\Desktop\\IW7\\IW7PPConReact\\Views\\Panel\\Admin.cshtml",
               "RelativeDocumentMoniker": "Views\\Panel\\Admin.cshtml",
               "ToolTip": "C:\\Users\\guill\\Desktop\\IW7\\IW7PPConReact\\Views\\Panel\\Admin.cshtml",
               "RelativeToolTip": "Views\\Panel\\Admin.cshtml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-15T02:24:53.734Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-15T02:24:53.734Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\guill\\Desktop\\IW7\\IW7PPConReact\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -65,8 +64,7 @@
               "ToolTip": "C:\\Users\\guill\\Desktop\\IW7\\IW7PPConReact\\ViewModel\\DonationsVM.cs",
               "RelativeToolTip": "ViewModel\\DonationsVM.cs",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-14T23:59:13.774Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-14T23:59:13.774Z"
             },
             {
               "$type": "Document",
@@ -77,12 +75,11 @@
               "ToolTip": "C:\\Users\\guill\\Desktop\\IW7\\IW7PPConReact\\Models\\Donations\\DonationRequests.cs",
               "RelativeToolTip": "Models\\Donations\\DonationRequests.cs",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-14T23:53:01.701Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-14T23:53:01.701Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "DonationsController.cs",
               "DocumentMoniker": "C:\\Users\\guill\\Desktop\\IW7\\IW7PPConReact\\Controllers\\Donations\\DonationsController.cs",
               "RelativeDocumentMoniker": "Controllers\\Donations\\DonationsController.cs",

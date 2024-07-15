@@ -109,6 +109,56 @@ namespace IW7PP.Controllers
             {
                 await _roleManager.CreateAsync(new IdentityRole("Cliente"));
             }
+<<<<<<< HEAD
+=======
+
+
+            RegistroVM registroVM = new RegistroVM();
+            return View(registroVM);
+        }
+
+
+        [HttpPost]
+        public async Task<IActionResult> Registro(RegistroVM usModel)
+        {
+            if (ModelState.IsValid)
+            {
+                if (usModel.Password.Equals(usModel.ConfirmPassword))
+                {
+                    var usuario = new UserModel
+                    {
+                        Name = usModel.Name,
+                        LastName = usModel.LastName,
+                        UserName = usModel.UserName,
+                        Email = usModel.Email,
+                        PhoneNumber = usModel.PhoneNumber
+                    };
+
+                    var resultado = await _userManager.CreateAsync(usuario, usModel.Password);
+
+
+                    if (resultado.Succeeded)
+                    {
+                        await _userManager.AddToRoleAsync(usuario, "Administrador");
+
+                        await _signInManager.SignInAsync(usuario, isPersistent: false);
+                        return RedirectToAction("Index", "Home");
+                    }
+                    else
+                    {
+                        ViewData["Mensaje"] = "No se logró crear el usuario";
+                    }
+                }
+                else
+                {
+                    ViewData["Mensaje"] = "Las contraseñas no coinciden";
+                    return View();
+                }
+
+            }
+
+            return View();
+>>>>>>> dd4246d5aaf16d5e50bee8b9cc5513e6243ce7c4
         }
         [HttpGet]
         public IActionResult Login()
